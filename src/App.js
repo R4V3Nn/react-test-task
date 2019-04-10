@@ -18,7 +18,9 @@ class App extends Component {
       { name: 'ReactJS', level: 8 },
       { name: 'AngularJS', level: 8 },
       ]
-  }
+  };
+
+
   render() {
 
     const {skills} = this.state;

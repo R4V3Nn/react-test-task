@@ -9,14 +9,32 @@ export default class Contact extends Component {
         mesage: ''
     };
 
-    handleChange = (e) => {
+    getName = (e) => {
 
-        const {name, value} = e.target;
+        const {value} = e.target;
         this.setState({
-            [name]: value
-        });
+            name: value
+        }, () => console.log(this.state.name));
 
     };
+
+    getEmail = (e) => {
+
+      const {value} = e.target;
+      this.setState({
+          email: value
+      }, () => console.log(this.state.email));
+
+  };
+
+  getMesage = (e) => {
+
+    const {value} = e.target;
+    this.setState({
+        mesage: value
+    }, () => console.log(this.state.mesage));
+
+};
 
     showMesage = (e) => {
 
@@ -44,24 +62,21 @@ export default class Contact extends Component {
                         </div>
                         <form className="contact__form">
                             <input 
-                                type="text"
-                                name="name" 
+                                type="text" 
                                 placeholder="Name"
-                                value={name}
-                                onChange={this.handleChange}
+                                defaultValue={name}
+                                onChange={this.getName}
                             />
                             <input 
                                 type="text"
-                                name="email" 
                                 placeholder="Email"
-                                value={email}
-                                onChange={this.handleChange}
+                                defaultValue={email}
+                                onChange={this.getEmail}
                             />
-                            <textarea
-                                name="mesage" 
+                            <textarea 
                                 placeholder="Send a mesage"
-                                value={mesage}
-                                onChange={this.handleChange}
+                                defaultValue={mesage}
+                                onChange={this.getMesage}
                             />
                             <button 
                                 className="contact__btn"

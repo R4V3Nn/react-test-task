@@ -9,11 +9,11 @@ const Skills = ({data}) => {
         for( let i = 1; i<=10; i++) {
             if(i <= level) {
                 skill.push(
-                    <span className="dots dots-active"></span>
+                    <span key={i} className="dots dots-active"></span>
                 )
             } else {
                 skill.push(
-                   <span className="dots"></span> 
+                   <span key={i} className="dots"></span> 
                 )
             }
         }
@@ -21,11 +21,11 @@ const Skills = ({data}) => {
     }
 
 
-    const elements = data.map((item) => {
+    const elements = data.map((item, index) => {
         const {name, level} = item;
         const raiting = getRaiting(level);
         return (
-            <div className="skill">
+            <div key={index} className="skill">
                 <span className="skill__name">{name}</span>
                 <span className="skill__level">
                     <span>{raiting}</span>

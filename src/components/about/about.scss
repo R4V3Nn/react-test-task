@@ -38,3 +38,18 @@
  
 }
 
+@media all and (max-width: 768px) {
+    .about {
+        &__content {
+            flex-direction: column;
+        };
+        &__goals, &__dreams {
+            text-align: center;
+        };
+
+        &__text {
+            text-align: left;
+        }
+    }
+    }
+
