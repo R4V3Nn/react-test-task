@@ -1,0 +1,37 @@
+.footer {
+    padding-top: 45px;
+    padding-bottom: 65px;
+    background: #333;
+    color: #fff;
+
+    a {
+        color: #fff;
+        text-decoration: none;
+    };
+
+    &__content {
+        display: flex;
+        justify-content: space-between;
+    };
+
+    &__contacts {
+        text-align: left;
+        list-style: none;
+        font-size: 15px;
+
+        li {
+            font-weight: bold;
+
+            a {
+                display: inline-block;
+                margin-left: 15px;
+                font-weight: normal;
+            }
+        }
+    };
+
+    &__logo {
+        font-size: 50px;
+        font-weight: bold;
+    }
+}

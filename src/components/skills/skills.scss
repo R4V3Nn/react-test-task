@@ -1,0 +1,43 @@
+.dots {
+    display: inline-block;
+    width: 20px;
+    height: 20px;
+    margin: 0 8px;
+    border-radius: 50%;
+    background-color: #9b9a9a;
+};
+
+.dots-active {
+    background-color: #333;
+};
+
+
+
+
+
+.skills {
+    padding-bottom: 40px;
+    margin-bottom: 25px;
+    border-bottom: 2px solid #ccc;
+
+    &__heading {
+        font-size: 30px;
+        text-transform: uppercase;
+        margin-bottom: 35px;
+    };
+
+    &__content {
+        max-width: 625px;
+        margin: 0 auto;
+        text-align: right;
+    };
+
+    .skill {
+        margin-bottom: 28px;
+
+        &__name {
+            margin-right: 90px;
+            font-size: 30px;
+        }
+    }
+}

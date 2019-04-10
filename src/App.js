@@ -1,25 +1,34 @@
 import React, { Component } from 'react';
-import logo from './logo.svg';
-import './App.css';
+import './App.scss';
+
+import Hero from './components/hero/hero';
+import About from './components/about/about';
+import Skills from './components/skills/skills';
+import Contact from './components/contact/contact';
+import Footer from './components/footer/footer';
+
 
 class App extends Component {
+
+  state = {
+    skills: [
+      { name: 'HTML5', level: 8},
+      { name: 'CSS', level: 5},
+      { name: 'JavaScript', level: 10},
+      { name: 'ReactJS', level: 8 },
+      { name: 'AngularJS', level: 8 },
+      ]
+  }
   render() {
+
+    const {skills} = this.state;
     return (
       <div className="App">
-        <header className="App-header">
-          <img src={logo} className="App-logo" alt="logo" />
-          <p>
-            Edit <code>src/App.js</code> and save to reload.
-          </p>
-          <a
-            className="App-link"
-            href="https://reactjs.org"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            Learn React
-          </a>
-        </header>
+        <Hero />
+        <About />
+        <Skills data={skills} />
+        <Contact />
+        <Footer />
       </div>
     );
   }

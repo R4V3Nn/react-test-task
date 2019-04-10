@@ -1,0 +1,40 @@
+.about {
+    margin-bottom: 25px;
+    border-bottom: 2px solid #ccc;
+
+    &__heading {
+        font-size: 30px;
+        text-transform: uppercase;
+        margin-bottom: 35px;
+    };
+
+    &__sub-heading {
+        display: inline-block;
+        margin-bottom: 20px;
+        font-size: 22px;
+    };
+
+
+    &__content {
+        display: flex;
+        justify-content: center;
+        padding-bottom: 45px;
+        font-size: 16px;
+    };
+
+    &__goals {
+        text-align: right;
+    };
+
+    &__avatar {
+        margin-top: 45px;
+        margin-left: 20px;
+        margin-right: 20px;
+    }
+
+    &__dreams {
+        text-align: left;
+    }
+ 
+}
+
